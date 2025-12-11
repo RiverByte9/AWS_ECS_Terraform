@@ -4,9 +4,15 @@
 ### 
 
 data "aws_route53_zone" "main" {
-  name         = var.domain_name
   private_zone = false
+  name         = "${var.domain_name}."
+
+  # filter {
+  #   name   = "name"
+  #   values = ["${var.domain_name}."]
+  # }
 }
+
 
 # # Create the DNS record for the application
 resource "aws_route53_record" "app" {
