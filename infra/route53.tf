@@ -5,7 +5,7 @@
 
 data "aws_route53_zone" "main" {
   private_zone = false
-  name         = "${var.domain_name}."
+  name         = var.domain_name
 
   # filter {
   #   name   = "name"
