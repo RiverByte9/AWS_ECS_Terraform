@@ -8,8 +8,6 @@ data "aws_route53_zone" "main" {
   private_zone = false
 }
 
-
-
 # # Create the DNS record for the application
 resource "aws_route53_record" "app" {
   zone_id = data.aws_route53_zone.main.zone_id
