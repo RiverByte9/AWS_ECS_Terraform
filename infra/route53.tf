@@ -4,13 +4,13 @@
 ### 
 
 data "aws_route53_zone" "main" {
+  name         = "rivere.xyz."
   private_zone = false
-  name         = var.domain_name
+}
 
-  # filter {
-  #   name   = "name"
-  #   values = ["${var.domain_name}."]
-  # }
+data "aws_route53_zone" "main" {
+  name         = "${var.domain_name}."
+  private_zone = false
 }
 
 

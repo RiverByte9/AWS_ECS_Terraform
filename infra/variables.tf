@@ -74,6 +74,7 @@ variable "public_hosted_zone_id" {
   default     = "riverbyte.xyz"
 }
 
+
 variable "domain_name" {
   description = "The domain name for the application"
 }
