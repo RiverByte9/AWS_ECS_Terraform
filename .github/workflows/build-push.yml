@@ -35,4 +35,4 @@ jobs:
         run: |
           cd src
           docker build -t ${{ env.ECR_REPO }}:latest .
-          docker push ${{ env.ECR_REPO }}:latest
+          docker push ${{ env.ECR_REPO }}:latest 
