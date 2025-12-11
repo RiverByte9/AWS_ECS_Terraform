@@ -4,7 +4,7 @@
 ### 
 
 data "aws_route53_zone" "main" {
-  name         = "rivere.xyz."
+  name         = "riverbyte.xyz."
   private_zone = false
 }
 
