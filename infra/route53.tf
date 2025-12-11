@@ -8,10 +8,6 @@ data "aws_route53_zone" "main" {
   private_zone = false
 }
 
-# data "aws_route53_zone" "main" {
-#   name         = "${var.domain_name}."
-#   private_zone = false
-# }
 
 
 # # Create the DNS record for the application
