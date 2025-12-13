@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  ECR_REPO: 292659698930.dkr.ecr.ap-south-1.amazonaws.com/bootcamp-dev-2-tier-flask
+  ECR_REPO: 292659698930.dkr.ecr.us-east-1.amazonaws.com/bootcamp-dev-2-tier-flask
 
 jobs:
   build:
@@ -24,11 +24,11 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1
+          aws-region: us-east-1
 
       - name: Login to ECR
         run: |
-          aws ecr get-login-password --region ap-south-1 \
+          aws ecr get-login-password --region us-east-1 \
           | docker login --username AWS --password-stdin ${{ env.ECR_REPO }}
 
       - name: Build & Push 
